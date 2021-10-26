@@ -51,6 +51,12 @@ firewall-cmd --reload
 dnf install nfs-utils nfs4-acl-tools
 showmount -e 192.168.0.40
 
+```
 mkdir -p ./backup
+
+## Linux
 mount -t nfs  192.168.0.40:/mnt/backup ./backup
+
+## MacOSx
+sudo mount -t nfs -o resvport,rw   192.168.0.40:/var/www/html/symfony $PWD/symfony
 ```
